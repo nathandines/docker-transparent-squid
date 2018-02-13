@@ -27,4 +27,4 @@ iptables -t nat -A OUTPUT -m owner ! --uid-owner squid -p tcp --dport 443 -j RED
 
 squid
 
-"$*"
+"$@"

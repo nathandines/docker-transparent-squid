@@ -1,4 +1,4 @@
-# docker-transparent-proxy
+# docker-transparent-squid
 
 Intended to be used as a base image for tools which need to go through a proxy server, where native proxy support is limited
 
@@ -11,5 +11,5 @@ docker run --rm -ti --cap-add=NET_ADMIN --cap-add=NET_RAW \
   -e 'UPSTREAM_PROXY_HOST=<proxy_hostname>' \
   -e 'UPSTREAM_PROXY_PORT=<proxy_port>' \
   -e 'UPSTREAM_PROXY_OPTIONS=<proxy_options>' \
-  nathandines/transparent-proxy:latest
+  nathandines/transparent-squid:latest
 ```
