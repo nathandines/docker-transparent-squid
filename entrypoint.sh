@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -u
+set -euo pipefail
 
 SQUID_CONF="${SQUID_CONF-/etc/squid/squid.conf}"
 
