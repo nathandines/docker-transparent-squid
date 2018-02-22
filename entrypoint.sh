@@ -10,6 +10,7 @@ if [ "${UPSTREAM_PROXY_HOST+x}" = 'x' ]; then
     -e "s/{{ proxy_port }}/${UPSTREAM_PROXY_PORT}/" \
     -e "s/{{ proxy_options }}/${UPSTREAM_PROXY_OPTIONS-}/" \
     "$SQUID_CONF"
+  echo 'never_direct allow all' >> "$SQUID_CONF"
 else
   sed -i '/{{ proxy_host }}/d' "$SQUID_CONF"
 fi
